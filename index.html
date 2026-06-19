@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>КиноПортал — главная</title>
+
+  <meta name="description" content="КиноПортал — сайт о фильмах, популярных подборках, актёрах и рейтингах.">
+  <meta name="keywords" content="фильмы, кино, кинопортал, популярные фильмы, актёры">
+  <meta name="author" content="Ваше имя">
+  <meta name="theme-color" content="#ffb300">
+
+  <meta property="og:title" content="КиноПортал — главная">
+  <meta property="og:description" content="Сайт о фильмах, актёрах и популярных киноновинках.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/icon-512.png">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/images/favicon.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('SW registered: ', registration);
+      })
+      .catch(error => {
+        console.log('SW registration failed: ', error);
+      });
+  });
+}
+</script>
+</body>
+</html>
